@@ -37,8 +37,7 @@ Content-Type: application/json
     "description": "Описание без заголовка",
     "priority": "Normal"
 }
-###
-PATCH {{baseUrl}}/api/tasks/2/complete
+
 
 ### PUT
 PUT {{baseUrl}}/api/tasks/1
@@ -50,6 +49,20 @@ Content-Type: application/json
     "isCompleted": true,
     "priority": "High"
 }
+### PATCH
+PATCH {{baseUrl}}/api/tasks/2/complete
 
 ### DELETE
 DELETE {{baseUrl}}/api/tasks/4
+
+### SEARCH
+GET {{baseUrl}}/api/tasks/search?query=ASP
+
+### HIGH PRIORITY
+GET {{baseUrl}}/api/tasks/priority/High
+
+### STATS
+GET {{baseUrl}}/api/tasks/stats
+
+### Sorted
+GET {{baseUrl}}/api/tasks/sorted?by=priority&desc=false
